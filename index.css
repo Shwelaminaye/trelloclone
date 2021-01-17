@@ -1,0 +1,89 @@
+body{
+    font-family: 'Hind', sans-serif;
+    background: url(img/aa.jpeg) no-repeat center fixed;
+  	background-size: cover;
+}
+.d-flex{
+	padding: 0;
+}
+.first-nav{
+    background-color:rgba(0, 0, 0, 0.164);
+    padding: 0;
+}
+.second-nav{
+    padding: 0;
+}
+.logo {
+    font-size: 25px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+   
+}
+.form-control{
+    background-color: rgb(255,255,255,0.3);
+    color: white;
+    border: white;
+}
+.btn{
+	background-color: rgb(255,255,255,0.3);
+}
+.btn:hover{
+	color: white;
+    background-color: rgba(26, 20, 20, 0.151);
+    transition: .5s ease-out;
+}
+.profile{
+    width: 32px;
+	height: 32px;
+	margin: 5px;
+	border-radius: 50%; 
+}
+.card-body {
+  background-color: #EBECF0;
+}
+.card-title {
+    font-size: 16px;
+    font-family: 'Hind', sans-serif;
+    color: #52617A;
+    font-weight: bold;
+}
+.smallcards {
+    
+    border: 1px solid #FFFFFF;
+    padding: 2px 3px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    border-radius: 5px;
+
+}
+.smallcards h5 {
+    font-size: 15px;
+    font-family: 'Hind', sans-serif;
+    padding: 5px;
+    color: #55637C;
+}
+.smallcards:hover{
+    background: #F4F5F7;
+    border: #F4F5F7;
+    transition: .5s ease-out;
+}
+.implementLine {
+    width: 40px;
+    height: 10px !important;
+    background-color: rgb(152, 182, 221);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.add{
+    margin-top: 13px;
+    border-radius: 6px;
+    background-color:  #FFFFFF;
+    border-color:  #FFFFFF;
+    color:#55637C ;
+    font-size: 13px;
+    
+}
+.add:hover {
+    background-color: rgba(26, 20, 20, 0.151) ;
+    border-color:  rgba(26, 20, 20, 0.151);
+}
