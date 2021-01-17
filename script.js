@@ -1,6 +1,8 @@
 var list = [];
 const endpoint = "https://trello-clone-ppm.herokuapp.com";
 const listWrapper = document.getElementById("wrapper");
+const exampleModalTitle = document.getElementById("exampleModalTitle");
+const cardDescId = document.getElementById("cardDescId");
 
 window.onload = () => {
   displayData();
@@ -49,7 +51,9 @@ function toCardHtmlString(card) {
   return `
 
         <div class="row p-1">
-              <div class="col smallcards">
+              <div class="col smallcards" data-toggle="modal" data-target="#exampleModal" card-id="${
+                card.id
+              }" onclick="onCardClicked(event)">
                 <h5>${card.title}</h5>
                 <div class="row">
                   ${
@@ -73,4 +77,28 @@ function toCardHtmlString(card) {
             </div>
 
   `;
+}
+
+function onCardClicked(event) {
+  const smallCardUi = getSmallCard(event.target);
+  const clickedCardId = smallCardUi.getAttribute("card-id");
+  let card = null;
+  for (let i = 0; i < list.length; i++) {
+    if (list[i].cards) {
+      const ind = list[i].cards.findIndex((c) => +c.id === +clickedCardId);
+      if (ind != -1) {
+        card = list[i].cards[ind];
+        break;
+      }
+    }
+  }
+  exampleModalTitle.innerHTML = card.title;
+  cardDescId.innerHTML = card.description ? card.description : "";
+}
+
+function getSmallCard(dom) {
+  if (dom.classList.contains("smallcards")) {
+    return dom;
+  }
+  return getSmallCard(dom.parentElement);
 }
